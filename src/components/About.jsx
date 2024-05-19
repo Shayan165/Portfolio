@@ -20,7 +20,7 @@ const About = () => {
             </div>
             <div>
                 <p>
-                I am a React.js Frontend Developer with a passion for creating dynamic and user-friendly web applications. With proficiency in React.js, JavaScript, HTML, CSS, and related frontend technologies, I bring a strong technical foundation to every project I work on. 
+                I am a Full Stack Mern Developer with a passion for creating dynamic and user-friendly Full Stack Web applications. With proficiency in React.js, Nodejs, Expressjs and MongoDb, I bring a strong technical foundation to every project I work on. 
                 </p>
             </div>
           </div>
