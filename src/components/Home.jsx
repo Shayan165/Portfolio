@@ -12,12 +12,11 @@ const Home = () => {
           Sayid Shayan
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
-          I'am a front end developer
+          I'am a Full Stack Web (MERN) developer
         </h2>
         <p className="text-[#8892b0] py-4 max-w-[700px]">
           specializing in building (and ocassionally designing) exceptional
-          digital ecperiences. Currently,I'm focuses on building reponsive
-          front end web applications.
+          digital ecperiences. Currently, I'm focuses on building Customer centric Full stck  applications.
         </p>
         <div>
           <Link to="work" smooth={true} duration={500}>
