@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
+    <div name="about" className="w-full h-screen  text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
@@ -11,22 +11,22 @@ const About = () => {
             </p>
           </div>
           <div></div>
+        </div>
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
+          <div className="sm:text-right text-4xl font-bold">
+            <p>Hi. I'm Shayan, nice to meet you. please take a look around.</p>
           </div>
-          <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-            <div className="sm:text-right text-4xl font-bold">
-              <p>
-                Hi. I'm Shayan, nice to meet you. please take a look around.
-              </p>
-            </div>
-            <div>
-                <p>
-                I am a Full Stack Mern Developer with a passion for creating dynamic and user-friendly Full Stack Web applications. With proficiency in React.js, Nodejs, Expressjs and MongoDb, I bring a strong technical foundation to every project I work on. 
-                </p>
-            </div>
+          <div>
+            <p>
+              I am a Front End Developer with a passion for creating dynamic
+              and user-friendly applications. With proficiency in React.js,
+              Nodejs, Expressjs and MongoDb, I bring a strong technical
+              foundation to every project I work on.
+            </p>
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
