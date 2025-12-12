@@ -340,7 +340,7 @@ export default function AnimatedBackground() {
   return (
     <div 
       ref={containerRef} 
-      className="fixed inset-0 w-full h-full -z-10"
+      className="fixed inset-0 w-full h-screen -z-10"
       style={{ background: 'linear-gradient(to bottom right, #111827, #000000, #111827)' }}
     />
   );

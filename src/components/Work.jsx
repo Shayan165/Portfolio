@@ -1,10 +1,5 @@
 import React from "react";
-import Gallery from "../assets/gallery.png";
-import Converter from "../assets/Converter.png";
-import Todo from "../assets/Todolist.png";
-import Pokedex from "../assets/pokedex.png";
-import Microsoft from "../assets/Microsoft.png";
-import Pass from "../assets/Pass_gen.png";
+import { trackProjectDemo } from '../utils/analytics';
 import Bazaar from "../assets/Bazaar.png";
 import Circlepr from "../assets/CirclePR.png";
 import Chess2kidz from "../assets/Chess2kidz.png";
@@ -57,59 +52,63 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ image, title, subtitle, demo, techStack }) => (
-  <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-900/90 to-slate-950/90 p-[1px] transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-500/30">
-    {/* inner glass panel */}
-    <div className="flex h-64 flex-col overflow-hidden rounded-2xl bg-slate-900/70 backdrop-blur-md border border-white/5">
-      {/* image */}
-      <div className="relative h-32 w-full overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/10 to-transparent opacity-80" />
-      </div>
+const ProjectCard = ({ image, title, subtitle, demo, techStack }) => {
+  const handleDemoClick = () => {
+    trackProjectDemo(title);
+  };
 
-      {/* content */}
-      <div className="flex flex-1 flex-col justify-between px-4 py-3">
-        <div className="text-left">
-          <p className="text-xs uppercase tracking-[0.2em] text-pink-400">
-            {subtitle}
-          </p>
-          <h3 className="mt-1 text-lg font-semibold text-white line-clamp-2">
-            {title}
-          </h3>
+  return (
+    <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-900/90 to-slate-950/90 p-[1px] transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-500/30">
+      <div className="flex h-full min-h-[280px] flex-col overflow-hidden rounded-2xl bg-slate-900/70 backdrop-blur-md border border-white/5">
+        <div className="relative h-36 md:h-40 w-full overflow-hidden flex-shrink-0">
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/10 to-transparent opacity-80" />
         </div>
 
-        <div className="mt-4 flex justify-between items-center">
-          <a
-            href={demo}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-pink-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-pink-500/40 transition hover:bg-pink-400 hover:shadow-pink-400/50"
-          >
-            View Demo
-          </a>
-          <span className="text-[11px] text-slate-400">{techStack}</span>
+        <div className="flex flex-1 flex-col justify-between px-4 sm:px-5 py-4">
+          <div className="text-left">
+            <p className="text-xs uppercase tracking-[0.2em] text-pink-400">
+              {subtitle}
+            </p>
+            <h3 className="mt-1 text-base sm:text-lg font-semibold text-white line-clamp-2">
+              {title}
+            </h3>
+          </div>
+
+          <div className="mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <a
+              href={demo}
+              target="_blank"
+              rel="noreferrer"
+              onClick={handleDemoClick}
+              className="inline-flex items-center justify-center rounded-lg bg-pink-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-pink-500/40 transition hover:bg-pink-400 hover:shadow-pink-400/50"
+            >
+              View Demo
+            </a>
+            <span className="text-xs sm:text-[11px] text-slate-400 line-clamp-2">{techStack}</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Work = () => {
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 ">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
+    <div name="work" className="w-full min-h-screen text-gray-300 py-16 md:py-20">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center w-full h-full">
+        <div className="pb-8 md:pb-12">
+          <p className="text-3xl sm:text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
           </p>
-          <p className="py-6">// Check out some of my recent work</p>
+          <p className="py-4 sm:py-6 text-sm sm:text-base">// Check out some of my recent work</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
