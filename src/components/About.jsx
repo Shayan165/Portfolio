@@ -18,9 +18,9 @@ const About = () => {
           </div>
           <div>
             <p>
-              I am a Front End Developer with a passion for creating dynamic
-              and user-friendly applications. With proficiency in React.js,
-              Nodejs, Expressjs and MongoDb, I bring a strong technical
+              I am a Full Stack Developer with a passion for creating dynamic
+              and user-friendly applications. With proficiency in React, Next.js,
+              Node.js, Express.js and MongoDB, I bring a strong technical
               foundation to every project I work on.
             </p>
           </div>

@@ -79,7 +79,7 @@ const Home = () => {
             }`}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-[#8892b0] to-pink-600 bg-clip-text text-transparent animate-gradient">
-              I'am a Front End Developer
+              I'am a Full Stack Developer
             </span>
           </h2>
           
@@ -100,7 +100,7 @@ const Home = () => {
           }`}
         >
           specializing in building (and ocassionally designing) exceptional
-          digital ecperiences. Currently, I'm focuses on building Customer centric Front End applications.
+          digital ecperiences. Currently, I'm focuses on building Customer centric Full Stack applications.
         </p>
 
         {/* Animated button */}

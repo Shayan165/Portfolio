@@ -1,5 +1,4 @@
 import React from "react";
-import { trackProjectDemo } from '../utils/analytics';
 import Bazaar from "../assets/Bazaar.png";
 import Circlepr from "../assets/CirclePR.png";
 import Chess2kidz from "../assets/Chess2kidz.png";
@@ -54,7 +53,6 @@ const projects = [
 
 const ProjectCard = ({ image, title, subtitle, demo, techStack }) => {
   const handleDemoClick = () => {
-    trackProjectDemo(title);
   };
 
   return (

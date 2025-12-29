@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
-import { trackFormSubmit, trackButtonClick } from '../utils/analytics';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,10 +11,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Track form submission
-    trackFormSubmit('Contact Form');
-    
+
     // Your form submission logic
     try {
       const response = await fetch("https://getform.io/f/269929dc-4ab7-4bf5-ab85-0f621ed2eb18", {
@@ -35,7 +32,6 @@ const Contact = () => {
   };
 
   const handleScrollToTop = () => {
-    trackButtonClick('Scroll To Top');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

@@ -159,7 +159,7 @@ const Navbar = () => {
               <HiOutlineMail size={32} />
             </a>
             <a
-               href="https://drive.google.com/file/d/1-uD0TpU63aEPqCR5tgCCoF6Mox3FeSAh/view?usp=sharing"
+               href="https://drive.google.com/file/d/1YL07b5SY98583aiIEdyw6jWbbdPgo5VM/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-pink-600 transform hover:scale-110 transition-all duration-300"
@@ -207,7 +207,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="https://drive.google.com/file/d/1-uD0TpU63aEPqCR5tgCCoF6Mox3FeSAh/view?usp=sharing"
+              href="https://drive.google.com/file/d/1YL07b5SY98583aiIEdyw6jWbbdPgo5VM/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
